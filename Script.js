@@ -25,9 +25,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Set the image source
         const albumImageElement = document.getElementById('album-image');
-        albumImageElement.src = selectedImage;
+        
+        if (albumImageElement) {
+            albumImageElement.src = selectedImage;
 
-        // Log the image element for debugging
-        console.log('Album image element:', albumImageElement);
+            // Log the image element for debugging
+            console.log('Album image element:', albumImageElement);
+
+            // Handle image loading error
+            albumImageElement.onerror = () => {
+                console.error('Failed to load image:', selectedImage);
+                albumImageElement.src = 'https://via.placeholder.com/150'; // Placeholder image
+            };
+        } else {
+            console.error('Element with ID "album-image" not found.');
+        }
     }
 });
