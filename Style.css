@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.landing-page {
+    animation: flicker-background 3s infinite alternate;
+}
+
+.album-page {
+    animation: pulsate-background 3s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.neon-heading {
+    text-align: center;
+    font-size: 3em;
+    color: #fff;
+    animation: neon-flicker 1s infinite alternate;
+}
+
+.button {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    background: url('button-asset.png') no-repeat center center;
+    background-size: contain;
+    text-indent: -9999px;
+}
+
+.album-container {
+    width: 85%;
+}
+
+#album-image {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes flicker-background {
+    0% { background-color: #ff00ff; }
+    25% { background-color: #00ff00; }
+    50% { background-color: #000000; }
+    75% { background-color: #ffffff; }
+    100% { background-color: #ffff00; }
+}
+
+@keyframes pulsate-background {
+    0% { background-color: #0000ff; }
+    50% { background-color: #ffff00; }
+    100% { background-color: #0000ff; }
+}
+
+@keyframes neon-flicker {
+    0% { text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff; }
+    100% { text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff; }
+}
