@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     console.log('Current path:', window.location.pathname);
 
     if (window.location.pathname.endsWith('/album')) {
@@ -32,21 +32,40 @@ document.addEventListener("DOMContentLoaded", () => {
             "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/o1sn18mekkoq8qk.jpg",
             "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/o296fd5ofedf5e.jpg",
             "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/oddnz5s55oin5izd%20(1).jpg",
-            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/ou5cfo3mei1uf1m.jpg"
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/ou5cfo3mei1uf1m.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/prwbqdli9cx5d59.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/qppyytmlsnw9nqmy.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/quskhsdg3oyzzs3s.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/qwybexv9n96mxnym.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/sddefault.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/u0crmn25f6xinfci.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/u7wvuslmh21fl2.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/umilrculi6wddiic.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/umxvs92cswx7xmcs%20(1).jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/v9fcfr44jzwhhfjr.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/vcgakt6p5f5t6fav.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/vf302hrhbydlry0v.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/vh6akyar4zmtaz.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/vhtu0qlmagce0cm.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/vxau06uvopiw0vxi.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/w0e1mbdt38j6d8.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/whqz6v32q0vs6v2.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/wo67uv4pzq4evez.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/xpo2daqocgmhgxq2.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/xsuf15y57yu61u5.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/z431bozae4rseso3.jpg"
         ];
 
         console.log('Album images:', albumImages);
 
         const randomIndex = Math.floor(Math.random() * albumImages.length);
         const selectedImage = albumImages[randomIndex];
-
         console.log('Selected image:', selectedImage);
 
         const albumImageElement = document.getElementById('album-image');
         
         if (albumImageElement) {
             albumImageElement.src = selectedImage;
-
             console.log('Album image element:', albumImageElement);
 
             albumImageElement.onload = () => {
