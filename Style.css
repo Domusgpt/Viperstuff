@@ -5,41 +5,51 @@ body {
 }
 
 .landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     animation: flicker-background 3s infinite alternate;
+    background-color: #000;
 }
 
 .album-page {
-    animation: pulsate-background 3s infinite alternate;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    animation: pulsate-background 3s infinite alternate;
+    background-color: #000;
 }
 
 .neon-heading {
-    text-align: center;
     font-size: 3em;
     color: #fff;
     animation: neon-flicker 1s infinite alternate;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .button {
     display: block;
     width: 200px;
-    margin: 20px auto;
     padding: 10px;
-    background: #000;  /* Change background color for better visibility */
+    background: #000;
     color: #fff;
     text-align: center;
     font-size: 1.5em;
     text-decoration: none;
     border-radius: 10px;
     transition: background 0.3s, transform 0.3s;
+    border: 2px solid #ff00ff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
 }
 
 .button:hover {
-    background: #444;  /* Darker background on hover */
-    transform: scale(1.1);  /* Slightly enlarge on hover */
+    background: #444;
+    transform: scale(1.1);
 }
 
 .album-container {
