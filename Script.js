@@ -1,38 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
     if (window.location.pathname.endsWith('album.html')) {
-        const albums = [
-            "https://i.imgur.com/0A0lKcR.jpg",
-            "https://i.imgur.com/1B1mLkE.jpg",
-            "https://i.imgur.com/2C2nMlF.jpg",
-            "https://i.imgur.com/3D3oMlG.jpg",
-            "https://i.imgur.com/4E4pMlH.jpg",
-            "https://i.imgur.com/5F5qMlI.jpg",
-            "https://i.imgur.com/6G6rMlJ.jpg",
-            "https://i.imgur.com/7H7sMlK.jpg",
-            "https://i.imgur.com/8I8tMlL.jpg",
-            "https://i.imgur.com/9J9uMlM.jpg",
-            "https://i.imgur.com/A1aMlN.jpg",
-            "https://i.imgur.com/B2bMlO.jpg",
-            "https://i.imgur.com/C3cMlP.jpg",
-            "https://i.imgur.com/D4dMlQ.jpg",
-            "https://i.imgur.com/E5eMlR.jpg",
-            "https://i.imgur.com/F6fMlS.jpg",
-            "https://i.imgur.com/G7gMlT.jpg",
-            "https://i.imgur.com/H8hMlU.jpg",
-            "https://i.imgur.com/I9iMlV.jpg",
-            "https://i.imgur.com/J0jMlW.jpg"
+        const albumImages = [
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/0tlhctodutgfuftl.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/2qnygnyfua04u4nn%20(1).jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/2u56p47uf3w3pwu.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/4ib4fywmdljkmjfi.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/4ljxkmwejkntmjjt.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/7dggy9g8nuufnf9g.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/9plyoxzes9vlz9y9.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/a7n3i7vu6v6gvav3.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/aneki1bf8d7wwe81.jpg",
+            "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/apauzr9pemqppqzp.jpg"
         ];
 
-        console.log('Albums loaded:', albums);
-        if (albums.length > 0) {
-            const randomIndex = Math.floor(Math.random() * albums.length);
-            const selectedAlbum = albums[randomIndex];
-            console.log('Selected album:', selectedAlbum);
-            const albumImage = document.getElementById('album-image');
-            albumImage.src = selectedAlbum;
-            console.log('Album image element:', albumImage);
-        } else {
-            console.error('No albums found in albums array');
-        }
+        // Log the album images array for debugging
+        console.log('Album images:', albumImages);
+
+        // Select a random image
+        const randomIndex = Math.floor(Math.random() * albumImages.length);
+        const selectedImage = albumImages[randomIndex];
+
+        // Log the selected image for debugging
+        console.log('Selected image:', selectedImage);
+
+        // Set the image source
+        const albumImageElement = document.getElementById('album-image');
+        albumImageElement.src = selectedImage;
+
+        // Log the image element for debugging
+        console.log('Album image element:', albumImageElement);
     }
 });
