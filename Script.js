@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    if (window.location.pathname.endsWith('album.html')) {
+    console.log('Current path:', window.location.pathname);
+    
+    if (window.location.pathname.endsWith('/album')) {
         const albumImages = [
             "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/0tlhctodutgfuftl.jpg",
             "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/2qnygnyfua04u4nn%20(1).jpg",
@@ -13,32 +15,33 @@ document.addEventListener("DOMContentLoaded", () => {
             "https://raw.githubusercontent.com/Domusgpt/Viperstuff/main/apauzr9pemqppqzp.jpg"
         ];
 
-        // Log the album images array for debugging
         console.log('Album images:', albumImages);
 
-        // Select a random image
         const randomIndex = Math.floor(Math.random() * albumImages.length);
         const selectedImage = albumImages[randomIndex];
 
-        // Log the selected image for debugging
         console.log('Selected image:', selectedImage);
 
-        // Set the image source
         const albumImageElement = document.getElementById('album-image');
         
         if (albumImageElement) {
             albumImageElement.src = selectedImage;
 
-            // Log the image element for debugging
             console.log('Album image element:', albumImageElement);
 
-            // Handle image loading error
+            albumImageElement.onload = () => {
+                console.log('Image loaded successfully:', selectedImage);
+            };
+
             albumImageElement.onerror = () => {
                 console.error('Failed to load image:', selectedImage);
-                albumImageElement.src = 'https://via.placeholder.com/150'; // Placeholder image
+                albumImageElement.src = 'https://via.placeholder.com/150';
+                console.log('Placeholder image set');
             };
         } else {
             console.error('Element with ID "album-image" not found.');
         }
+    } else {
+        console.log('Not on the album page, script will not execute.');
     }
 });
