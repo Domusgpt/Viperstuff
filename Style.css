@@ -26,11 +26,20 @@ body {
 .button {
     display: block;
     width: 200px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 10px;
-    background: url('button-asset.png') no-repeat center center;
-    background-size: contain;
-    text-indent: -9999px;
+    background: #000;  /* Change background color for better visibility */
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background: #444;  /* Darker background on hover */
+    transform: scale(1.1);  /* Slightly enlarge on hover */
 }
 
 .album-container {
